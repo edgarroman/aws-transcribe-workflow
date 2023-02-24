@@ -172,7 +172,13 @@ Personal notes to keep track of stuff while I'm working on getting this up and r
 ## Stuck here
 
 well, i can't go any further because the Transcribe service has no way to store the callback token of Step Functions.
-Can't put it in a tag since it's longer than 256 chars.  
-So I would need to store the token with the filename in like dynamodb or something goofy
+Can't put it in a tag since it's longer than 256 chars.
+
+### Possible Solutions
+
+-   I would need to store the token with the filename in like dynamodb or something goofy
+-   Implement loop in Step Functions to poll job status and then continue
+-   In theory, based on execution name, lookup the token using StateEnteredEventDetails from GetExecutionHistory
+    https://stackoverflow.com/questions/57704931/aws-sdk-in-java-how-to-get-activities-from-worker-when-multple-execution-on-go
 
 Will end up rewriting it using two lambda functions and event bridge to detect when the transcribe job is complete.
