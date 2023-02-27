@@ -178,6 +178,7 @@ Can't put it in a tag since it's longer than 256 chars.
 
 -   I would need to store the token with the filename in like dynamodb or something goofy
 -   Implement loop in Step Functions to poll job status and then continue
+    https://aws.amazon.com/blogs/compute/building-a-low-code-speech-you-know-counter-using-aws-step-functions/
 -   In theory, based on execution name, lookup the token using StateEnteredEventDetails from GetExecutionHistory
     https://stackoverflow.com/questions/57704931/aws-sdk-in-java-how-to-get-activities-from-worker-when-multple-execution-on-go
 
